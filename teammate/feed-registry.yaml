@@ -1,0 +1,914 @@
+# feed-registry.yaml
+# Content Curator 订阅源注册表
+# 单一数据源，管理所有订阅源的分类、评分、元数据
+
+metadata:
+  version: "1.0"
+  last_updated: "2026-02-12"
+  total_feeds: 105
+
+categories:
+  - id: "x-pro"
+    name: "Pro Influencers (X)"
+    type: "x_account"
+    description: "AI/ML 领域核心权威"
+
+  - id: "x-cn"
+    name: "Chinese Influencers (X)"
+    type: "x_account"
+    description: "中文圈 AI/Tech 观点领袖"
+
+  - id: "blog-curated"
+    name: "Curated Blogs"
+    type: "blog_rss"
+    description: "Ivan 亲选博客"
+
+  - id: "blog-karpathy"
+    name: "Karpathy HN Popular"
+    type: "blog_rss"
+    description: "Karpathy 推荐的 HN 热门博客 (2025)"
+
+# ============================================================
+# Feeds
+# ============================================================
+# 字段说明：
+#   id              唯一标识
+#   handle/name     显示名（X 用 handle，博客用 name）
+#   url             主页 URL
+#   rss_url         RSS/Atom 地址（博客需要，X 账号不需要）
+#   category        分类 ID
+#   attention_ivan  Ivan 评分 (0-5)，null = 未评分
+#   attention_curator  curator 积累评分 (0-5)，null = 未评分
+#   tags            标签
+#   signal_type     insight | news | mixed
+#   language        en | zh
+#   notes           备注
+# ============================================================
+
+feeds:
+
+  # === X Pro Influencers ===
+
+  - id: "x-allen-ai"
+    handle: "@allen_ai"
+    url: "https://x.com/allen_ai"
+    category: "x-pro"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "research"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "x-deedydas"
+    handle: "@deedydas"
+    url: "https://x.com/deedydas"
+    category: "x-pro"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "tech-industry"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "x-ai-for-success"
+    handle: "@ai_for_success"
+    url: "https://x.com/ai_for_success"
+    category: "x-pro"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "applied"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "x-aravsrinivas"
+    handle: "@AravSrinivas"
+    url: "https://x.com/AravSrinivas"
+    category: "x-pro"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "perplexity", "search"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "x-ilyasut"
+    handle: "@ilyasut"
+    url: "https://x.com/ilyasut"
+    category: "x-pro"
+    attention_ivan: 4.6
+    attention_curator: null
+    tags: ["AI", "safety", "deep-learning"]
+    signal_type: "insight"
+    language: "en"
+    notes: "Ilya Sutskever，深度学习核心人物"
+
+  - id: "x-karpathy"
+    handle: "@karpathy"
+    url: "https://x.com/karpathy"
+    category: "x-pro"
+    attention_ivan: 4.6
+    attention_curator: null
+    tags: ["AI", "neural-nets", "education"]
+    signal_type: "insight"
+    language: "en"
+    notes: "一手观点，影响力极高"
+
+  - id: "x-lexfridman"
+    handle: "@lexfridman"
+    url: "https://x.com/lexfridman"
+    category: "x-pro"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "podcast", "interviews"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "x-katecrawford"
+    handle: "@katecrawford"
+    url: "https://x.com/katecrawford"
+    category: "x-pro"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "ethics", "society"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "x-demishassabis"
+    handle: "@demishassabis"
+    url: "https://x.com/demishassabis"
+    category: "x-pro"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "deepmind", "AGI"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "x-drfeifei"
+    handle: "@drfeifei"
+    url: "https://x.com/drfeifei"
+    category: "x-pro"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "computer-vision", "academia"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "x-andrewng"
+    handle: "@AndrewYNg"
+    url: "https://x.com/AndrewYNg"
+    category: "x-pro"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "education", "applied-AI"]
+    signal_type: "mixed"
+    language: "en"
+
+  # === Chinese Influencers (X) ===
+
+  - id: "x-dotey"
+    handle: "@dotey"
+    url: "https://x.com/dotey"
+    category: "x-cn"
+    attention_ivan: 4.6
+    attention_curator: null
+    tags: ["AI", "tool-building", "chinese-context"]
+    signal_type: "insight"
+    language: "zh"
+    notes: "价值高，会有很多高洞见的内容"
+
+  - id: "x-9hills"
+    handle: "@9hills"
+    url: "https://x.com/9hills"
+    category: "x-cn"
+    attention_ivan: 4.0
+    attention_curator: null
+    tags: ["AI", "engineering", "infrastructure"]
+    signal_type: "insight"
+    language: "zh"
+    notes: "价值高，但仅在技术侧"
+
+  - id: "x-zhang-benita"
+    handle: "@zhang_benita"
+    url: "https://x.com/zhang_benita"
+    category: "x-cn"
+    attention_ivan: 3.8
+    attention_curator: null
+    tags: ["AI", "product"]
+    signal_type: "mixed"
+    language: "zh"
+
+  - id: "x-svwang1"
+    handle: "@Svwang1"
+    url: "https://x.com/Svwang1"
+    category: "x-cn"
+    attention_ivan: 3.8
+    attention_curator: null
+    tags: ["AI", "VC", "industry"]
+    signal_type: "mixed"
+    language: "zh"
+
+  - id: "x-iguangzhengli"
+    handle: "@iguangzhengli"
+    url: "https://x.com/iguangzhengli"
+    category: "x-cn"
+    attention_ivan: 3.4
+    attention_curator: null
+    tags: ["AI", "tech"]
+    signal_type: "mixed"
+    language: "zh"
+
+  - id: "x-caolei1"
+    handle: "@caolei1"
+    url: "https://x.com/caolei1"
+    category: "x-cn"
+    attention_ivan: 3.4
+    attention_curator: null
+    tags: ["AI", "tech"]
+    signal_type: "mixed"
+    language: "zh"
+
+  - id: "x-foxshuo"
+    handle: "@foxshuo"
+    url: "https://x.com/foxshuo"
+    category: "x-cn"
+    attention_ivan: 4.2
+    attention_curator: null
+    tags: ["AI", "product", "insight"]
+    signal_type: "insight"
+    language: "zh"
+
+  - id: "x-op7418"
+    handle: "@op7418"
+    url: "https://x.com/op7418"
+    category: "x-cn"
+    attention_ivan: 3.5
+    attention_curator: null
+    tags: ["AI", "news"]
+    signal_type: "news"
+    language: "zh"
+    notes: "最新信息，但价值不一定高，news"
+
+  # === Ivan Curated Blogs ===
+
+  - id: "blog-moretothat"
+    name: "moretothat.com"
+    url: "https://moretothat.com/"
+    rss_url: "https://moretothat.com/feed/"
+    category: "blog-curated"
+    attention_ivan: 4.6
+    attention_curator: null
+    tags: ["philosophy", "life", "deep-thinking"]
+    signal_type: "insight"
+    language: "en"
+    notes: "深心灵"
+
+  - id: "blog-eugeneyan"
+    name: "eugeneyan.com"
+    url: "https://eugeneyan.com/"
+    rss_url: null
+    category: "blog-curated"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "recsys", "applied-ML"]
+    signal_type: "insight"
+    language: "en"
+    notes: "Principal Applied Scientist @ Amazon，推荐系统 + AI 产品"
+
+  - id: "blog-sive-rs"
+    name: "sive.rs"
+    url: "https://sive.rs/"
+    rss_url: "https://sive.rs/en.atom"
+    category: "blog-curated"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["philosophy", "life", "entrepreneurship"]
+    signal_type: "insight"
+    language: "en"
+    notes: "慢思考者、探索者"
+
+  - id: "blog-waitbutwhy"
+    name: "waitbutwhy.com"
+    url: "https://waitbutwhy.com/"
+    rss_url: "https://waitbutwhy.com/feed"
+    category: "blog-curated"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["philosophy", "science", "deep-thinking"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "blog-indigox"
+    name: "indigox.me"
+    url: "https://www.indigox.me/"
+    rss_url: null
+    category: "blog-curated"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["technology", "investment", "deep-thinking"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "blog-naval"
+    name: "nav.al"
+    url: "https://nav.al/"
+    rss_url: null
+    category: "blog-curated"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["philosophy", "startups", "wealth"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "blog-lilianweng"
+    name: "lilianweng.github.io"
+    url: "https://lilianweng.github.io/"
+    rss_url: "https://lilianweng.github.io/index.xml"
+    category: "blog-curated"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "research", "deep-learning"]
+    signal_type: "insight"
+    language: "en"
+    notes: "OpenAI，高质量技术博客"
+
+  - id: "blog-stephango"
+    name: "stephango.com"
+    url: "https://stephango.com/"
+    rss_url: null
+    category: "blog-curated"
+    attention_ivan: 4.6
+    attention_curator: null
+    tags: ["product", "obsidian", "design-philosophy"]
+    signal_type: "insight"
+    language: "en"
+    notes: "Obsidian CEO，很有想法有洞见"
+
+  - id: "blog-jasonwei"
+    name: "jasonwei.net"
+    url: "https://www.jasonwei.net/"
+    rss_url: null
+    category: "blog-curated"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "reasoning", "chain-of-thought"]
+    signal_type: "insight"
+    language: "en"
+    notes: "Meta Superintelligence Labs，chain-of-thought 先驱"
+
+  - id: "blog-alperenkeles"
+    name: "alperenkeles.com"
+    url: "https://alperenkeles.com/"
+    rss_url: null
+    category: "blog-curated"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "testing", "PL"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "blog-jasonspielman"
+    name: "jasonspielman.com"
+    url: "https://jasonspielman.com/"
+    rss_url: null
+    category: "blog-curated"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["product", "design", "notebooklm"]
+    signal_type: "insight"
+    language: "en"
+    notes: "NotebookLM 产品设计师，少更但有意思"
+
+  - id: "blog-lucumr"
+    name: "lucumr.pocoo.org"
+    url: "https://lucumr.pocoo.org/"
+    rss_url: "https://lucumr.pocoo.org/feed.atom"
+    category: "blog-curated"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "python", "open-source"]
+    signal_type: "insight"
+    language: "en"
+    notes: "Flask/Jinja2 作者，Sentry 创始人"
+
+  - id: "blog-innei"
+    name: "Innei (GitHub)"
+    url: "https://github.com/Innei"
+    rss_url: null
+    category: "blog-curated"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["frontend", "react", "open-source"]
+    signal_type: "mixed"
+    language: "zh"
+    notes: "有意思的前端开发者，TypeScript/React"
+
+  - id: "blog-simonwillison"
+    name: "simonwillison.net"
+    url: "https://simonwillison.net/"
+    rss_url: "https://simonwillison.net/atom/everything/"
+    category: "blog-curated"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "data", "open-source", "python"]
+    signal_type: "mixed"
+    language: "en"
+    notes: "Django 联合创始人，Datasette 作者，AI 工具活跃"
+
+  # === Karpathy HN Popular Blogs ===
+  # 注: simonwillison 和 lucumr 已在 blog-curated 中，不重复
+
+  - id: "hn-jeffgeerling"
+    name: "jeffgeerling.com"
+    url: "https://www.jeffgeerling.com/"
+    rss_url: "https://www.jeffgeerling.com/blog.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "hardware", "devops"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-seangoedecke"
+    name: "seangoedecke.com"
+    url: "https://www.seangoedecke.com/"
+    rss_url: "https://www.seangoedecke.com/rss.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-daringfireball"
+    name: "daringfireball.net"
+    url: "https://daringfireball.net/"
+    rss_url: "https://daringfireball.net/feeds/main"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["apple", "tech-industry"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-antirez"
+    name: "antirez.com"
+    url: "http://antirez.com/"
+    rss_url: "http://antirez.com/rss"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "redis", "systems"]
+    signal_type: "insight"
+    language: "en"
+    notes: "Redis 作者"
+
+  - id: "hn-maurycyz"
+    name: "maurycyz.com"
+    url: "https://maurycyz.com/"
+    rss_url: "https://maurycyz.com/index.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-mitchellh"
+    name: "mitchellh.com"
+    url: "https://mitchellh.com/"
+    rss_url: "https://mitchellh.com/feed.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "systems", "ghostty"]
+    signal_type: "insight"
+    language: "en"
+    notes: "HashiCorp 联合创始人"
+
+  - id: "hn-xeiaso"
+    name: "xeiaso.net"
+    url: "https://xeiaso.net/"
+    rss_url: "https://xeiaso.net/blog.rss"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "nix", "cloud"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-oldnewthing"
+    name: "The Old New Thing (Microsoft)"
+    url: "https://devblogs.microsoft.com/oldnewthing/"
+    rss_url: "https://devblogs.microsoft.com/oldnewthing/feed"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "windows", "history"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-righto"
+    name: "righto.com"
+    url: "https://www.righto.com/"
+    rss_url: "https://www.righto.com/feeds/posts/default"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "hardware", "retro"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-skyfall"
+    name: "skyfall.dev"
+    url: "https://skyfall.dev/"
+    rss_url: "https://skyfall.dev/rss.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-overreacted"
+    name: "overreacted.io"
+    url: "https://overreacted.io/"
+    rss_url: "https://overreacted.io/rss.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["frontend", "react", "engineering"]
+    signal_type: "insight"
+    language: "en"
+    notes: "Dan Abramov (React 核心团队)"
+
+  - id: "hn-matklad"
+    name: "matklad.github.io"
+    url: "https://matklad.github.io/"
+    rss_url: "https://matklad.github.io/feed.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "rust", "IDE"]
+    signal_type: "insight"
+    language: "en"
+    notes: "rust-analyzer 作者"
+
+  - id: "hn-evanhahn"
+    name: "evanhahn.com"
+    url: "https://evanhahn.com/"
+    rss_url: "https://evanhahn.com/feed.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "web"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-terriblesoftware"
+    name: "terriblesoftware.org"
+    url: "https://terriblesoftware.org/"
+    rss_url: "https://terriblesoftware.org/feed/"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-nesbitt"
+    name: "nesbitt.io"
+    url: "https://nesbitt.io/"
+    rss_url: "https://nesbitt.io/feed.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["open-source"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-susam"
+    name: "susam.net"
+    url: "https://susam.net/"
+    rss_url: "https://susam.net/feed.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "math"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-borretti"
+    name: "borretti.me"
+    url: "https://borretti.me/"
+    rss_url: "https://borretti.me/feed.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "PL"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-geohot"
+    name: "geohot.github.io"
+    url: "https://geohot.github.io/blog/"
+    rss_url: "https://geohot.github.io/blog/feed.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "hardware", "tinygrad"]
+    signal_type: "insight"
+    language: "en"
+    notes: "George Hotz，tinygrad 创始人"
+
+  - id: "hn-jim-nielsen"
+    name: "blog.jim-nielsen.com"
+    url: "https://blog.jim-nielsen.com/"
+    rss_url: "https://blog.jim-nielsen.com/feed.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["design", "web"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-geoffreylitt"
+    name: "geoffreylitt.com"
+    url: "https://www.geoffreylitt.com/"
+    rss_url: "https://www.geoffreylitt.com/feed.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "tools-for-thought"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-eli-greenplace"
+    name: "eli.thegreenplace.net"
+    url: "https://eli.thegreenplace.net/"
+    rss_url: "https://eli.thegreenplace.net/feeds/all.atom.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "compilers", "go"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-fabiensanglard"
+    name: "fabiensanglard.net"
+    url: "https://fabiensanglard.net/"
+    rss_url: "https://fabiensanglard.net/rss.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "graphics", "history"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-berthub"
+    name: "berthub.eu"
+    url: "https://berthub.eu/"
+    rss_url: "https://berthub.eu/articles/index.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "networking"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-danielwirtz"
+    name: "danielwirtz.com"
+    url: "https://danielwirtz.com/"
+    rss_url: "https://danielwirtz.com/rss.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["design", "product"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-minimaxir"
+    name: "minimaxir.com"
+    url: "https://minimaxir.com/"
+    rss_url: "https://minimaxir.com/index.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "data-science"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-krebsonsecurity"
+    name: "krebsonsecurity.com"
+    url: "https://krebsonsecurity.com/"
+    rss_url: "https://krebsonsecurity.com/feed/"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["security"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-troyhunt"
+    name: "troyhunt.com"
+    url: "https://www.troyhunt.com/"
+    rss_url: "https://www.troyhunt.com/rss/"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["security"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-pluralistic"
+    name: "pluralistic.net"
+    url: "https://pluralistic.net/"
+    rss_url: "https://pluralistic.net/feed/"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["tech-industry", "policy", "society"]
+    signal_type: "insight"
+    language: "en"
+    notes: "Cory Doctorow"
+
+  - id: "hn-dynomight"
+    name: "dynomight.net"
+    url: "https://dynomight.net/"
+    rss_url: "https://dynomight.net/feed.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["science", "data", "deep-thinking"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-rachelbythebay"
+    name: "rachelbythebay.com"
+    url: "https://rachelbythebay.com/"
+    rss_url: "https://rachelbythebay.com/w/atom.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "systems", "debugging"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-johndcook"
+    name: "johndcook.com"
+    url: "https://www.johndcook.com/"
+    rss_url: "https://www.johndcook.com/blog/feed/"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["math", "statistics"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-construction-physics"
+    name: "construction-physics.com"
+    url: "https://www.construction-physics.com/"
+    rss_url: "https://www.construction-physics.com/feed"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["industry", "engineering", "deep-thinking"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-gwern"
+    name: "gwern.net"
+    url: "https://gwern.net/"
+    rss_url: "https://gwern.substack.com/feed"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "research", "deep-analysis"]
+    signal_type: "insight"
+    language: "en"
+    notes: "极深的长文分析"
+
+  - id: "hn-experimental-history"
+    name: "experimental-history.com"
+    url: "https://www.experimental-history.com/"
+    rss_url: "https://www.experimental-history.com/feed"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["science", "psychology", "deep-thinking"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-paulgraham"
+    name: "paulgraham.com"
+    url: "https://paulgraham.com/"
+    rss_url: "http://www.aaronsw.com/2002/feeds/pgessays.rss"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["startups", "philosophy", "writing"]
+    signal_type: "insight"
+    language: "en"
+    notes: "YC 创始人，经典 essays"
+
+  - id: "hn-garymarcus"
+    name: "garymarcus.substack.com"
+    url: "https://garymarcus.substack.com/"
+    rss_url: "https://garymarcus.substack.com/feed"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "critique"]
+    signal_type: "insight"
+    language: "en"
+    notes: "AI 批评者视角"
+
+  - id: "hn-dwarkesh"
+    name: "dwarkesh.com"
+    url: "https://www.dwarkeshpatel.com/"
+    rss_url: "https://www.dwarkeshpatel.com/feed"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["AI", "interviews", "deep-thinking"]
+    signal_type: "insight"
+    language: "en"
+    notes: "高质量长访谈"
+
+  - id: "hn-hillelwayne"
+    name: "Hillel Wayne"
+    url: "https://buttondown.com/hillelwayne"
+    rss_url: "https://buttondown.com/hillelwayne/rss"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "formal-methods"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-steveblank"
+    name: "steveblank.com"
+    url: "https://steveblank.com/"
+    rss_url: "https://steveblank.com/feed/"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["startups", "entrepreneurship"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-anildash"
+    name: "anildash.com"
+    url: "https://anildash.com/"
+    rss_url: "https://anildash.com/feed.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["tech-industry", "culture"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-computer-rip"
+    name: "computer.rip"
+    url: "https://computer.rip/"
+    rss_url: "https://computer.rip/rss.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "history", "networking"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-lcamtuf"
+    name: "lcamtuf.substack.com"
+    url: "https://lcamtuf.substack.com/"
+    rss_url: "https://lcamtuf.substack.com/feed"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["security", "engineering"]
+    signal_type: "insight"
+    language: "en"
+
+  - id: "hn-keygen"
+    name: "keygen.sh"
+    url: "https://keygen.sh/"
+    rss_url: "https://keygen.sh/blog/feed.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering", "business"]
+    signal_type: "mixed"
+    language: "en"
+
+  - id: "hn-grantslatton"
+    name: "grantslatton.com"
+    url: "https://grantslatton.com/"
+    rss_url: "https://grantslatton.com/rss.xml"
+    category: "blog-karpathy"
+    attention_ivan: null
+    attention_curator: null
+    tags: ["engineering"]
+    signal_type: "mixed"
+    language: "en"
+
+  # 注: 其余 HN feeds 已包含代表性样本
+  # 完整 86 feeds 可通过导入 OPML 文件扩展
+  # OPML 源: https://gist.github.com/emschwartz/e6d2bf860ccc367fe37ff953ba6de66b
