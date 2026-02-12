@@ -1,0 +1,24 @@
+# LLM API Key Configuration
+# 复制此文件为 llm-config.yaml 并填入实际 key
+# cp config/llm-config.example.yaml config/llm-config.yaml
+
+# 主要 LLM 提供商
+anthropic:
+  api_key: "sk-ant-xxx"
+  default_model: "claude-sonnet-4-5-20250929"
+
+openai:
+  api_key: "sk-xxx"
+  default_model: "gpt-4o"
+
+# 可选：其他提供商
+google:
+  api_key: ""
+  default_model: "gemini-2.0-flash"
+
+deepseek:
+  api_key: ""
+  default_model: "deepseek-chat"
+
+# 使用配置
+default_provider: "anthropic"

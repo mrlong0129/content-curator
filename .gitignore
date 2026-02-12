@@ -1,0 +1,6 @@
+# API keys - never commit actual config
+config/llm-config.yaml
+.env
+
+# OS
+.DS_Store
